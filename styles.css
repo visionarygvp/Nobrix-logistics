@@ -13,18 +13,22 @@ header {
     color: white;
     padding: 1rem 2rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
     height: 60px;
+    max-width: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -65,6 +69,7 @@ input, textarea, button {
     padding: 0.75rem;
     width: 100%;
     max-width: 500px;
+    box-sizing: border-box;
 }
 
 footer {
@@ -72,4 +77,41 @@ footer {
     padding: 1rem;
     background: #004080;
     color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .btn {
+        padding: 0.5rem 1rem;
+    }
+
+    input, textarea, button {
+        font-size: 1rem;
+    }
 }
